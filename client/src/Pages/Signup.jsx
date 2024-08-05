@@ -65,14 +65,16 @@ export default function Signup() {
       return;
     }
 
-    const formData = new FormData();
-    formData.append("fullName", signupData.fullName);
-    formData.append("email", signupData.email);
-    formData.append("password", signupData.password);
-    formData.append("avatar", signupData.avatar);
-
+    // const formData = new FormData();
+    // formData.append("fullName", signupData.fullName);
+    // formData.append("email", signupData.email);
+    // formData.append("password", signupData.password);
+    // formData.append("avatar", signupData.avatar);
+    
     // dispatch create account action
-    const response = await dispatch(createAccount(formData));
+    console.log("before send",signupData)
+    const response = await dispatch(createAccount(signupData));
+    console.log("after send",signupData)
     if (response?.payload?.success) {
       setSignupData({
         fullName: "",

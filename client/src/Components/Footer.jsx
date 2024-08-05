@@ -20,7 +20,7 @@ export default function Footer() {
           href="#"
           className="md:text-3xl text-xl text-gray-900 dark:text-slate-50 hover:text-gray-500 dark:hover:text-slate-300"
         >
-          <BsInstagram />
+          <BsFacebook />
         </a>
         <a
           href="#"

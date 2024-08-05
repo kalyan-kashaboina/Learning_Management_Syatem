@@ -25,8 +25,10 @@ import AddLecture from "./Pages/Dashboard/AddLecture";
 import AdminDashboard from "./Pages/Dashboard/AdminDashboard";
 
 function App() {
+
   return (
     <>
+ 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
@@ -47,11 +49,11 @@ function App() {
         <Route path="/courses" element={<CourseList />} />
         <Route path="/courses/description" element={<CourseDescription />} />
 
-        <Route element={<RequireAuth allowedRoles={["ADMIN"]} />}>
+        {/* <Route element={<RequireAuth allowedRoles={["ADMIN"]} />}> */}
           <Route path="/course/create" element={<CreateCourse />} />
           <Route path="/course/addlecture" element={<AddLecture />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
-        </Route>
+        {/* </Route> */}
 
         <Route element={<RequireAuth allowedRoles={["USER", "ADMIN"]} />}>
           <Route path="/user/profile" element={<Profile />} />
